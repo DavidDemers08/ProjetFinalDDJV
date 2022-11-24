@@ -12,7 +12,6 @@ public class PlayerMouvement : MonoBehaviour
     float horizontal = 0;
     float moveSpeed = 40f;
     private bool jump = false;
-    private bool facingRight = true;
 
     void Start()
     {
@@ -24,24 +23,13 @@ public class PlayerMouvement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal") * moveSpeed;
 
         animator.SetFloat("Vitesse",Mathf.Abs(horizontal));
-        
-        if(horizontal > 0 && !facingRight)
-        {
-            sprite.flipX = false;
-            facingRight = true;
-        }
-        else if(horizontal <0 && facingRight)
-        {
-            sprite.flipX = true;
-
-            facingRight = false;
-        }
 
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            
         }
-
+        animator.SetBool("IsJumping", jump);
 
     }
 
@@ -50,6 +38,11 @@ public class PlayerMouvement : MonoBehaviour
         controller2D.Move(horizontal * Time.fixedDeltaTime, false, jump);
         
 
+    }
+
+    public void OnLanded()
+    {
         jump = false;
+        animator.SetBool("IsJumping", jump);
     }
 }

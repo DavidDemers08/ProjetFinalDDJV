@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class ScriptRotation : MonoBehaviour
 {
-    public Camera cam;
+    Camera cam;
     
 
     // Start is called before the first frame update
     void Start()
     {
+        cam = Camera.main;
     }
 
     // Update is called once per frame
@@ -25,7 +26,6 @@ public class ScriptRotation : MonoBehaviour
 
         //float angle = Vector3.Angle(difference, Vector3.right);
         difference.z = 0.0f;
-
         transform.right = difference.normalized;
 
     }
