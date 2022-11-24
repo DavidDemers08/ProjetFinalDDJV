@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class CharacterMouvement : MonoBehaviour
 {
-    public CharacterController controller;
+    CharacterController2D controller;
     float horizontal;
-    public float moveSpeed = 40f; 
+    public float moveSpeed = 40f;
+    bool jump = false;
      
     // Start is called before the first frame update
     void Start()
@@ -18,10 +19,16 @@ public class CharacterMouvement : MonoBehaviour
     void Update()
     {
         horizontal = Input.GetAxisRaw("Horizontal") * moveSpeed;
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            jump = true;
+        }
     }
 
     private void FixedUpdate()
     {
-        controller.Move(new Vector3(horizontal * Time.deltaTime,0,0));
+        controller.Move(horizontal*Time.deltaTime,false,jump);
+        jump = false;
     }
 }
