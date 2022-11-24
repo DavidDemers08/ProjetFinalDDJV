@@ -56,3 +56,12 @@ TagManager:
   - name: SolPhysique
     uniqueID: 3050173001
     locked: 0
+  - name: Bras
+    uniqueID: 3258241567
+    locked: 0
+  - name: Character
+    uniqueID: 2415076035
+    locked: 0
+  - name: Gun
+    uniqueID: 2709894929
+    locked: 0

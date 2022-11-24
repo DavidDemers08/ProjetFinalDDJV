@@ -6,12 +6,11 @@ using UnityEngine;
 public class ScriptRotation : MonoBehaviour
 {
     public Camera cam;
-    private Quaternion m_MyQuaternion;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        m_MyQuaternion = new Quaternion();
     }
 
     // Update is called once per frame
@@ -28,6 +27,7 @@ public class ScriptRotation : MonoBehaviour
         difference.z = 0.0f;
 
         transform.right = difference.normalized;
+
     }
 }
 
