@@ -11,11 +11,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - HorizonLoin
+  - HorizonProche
+  - DecoDerriere
+  - DecoDevant
+  - SolPhysique
   - 
   - 
   - 
@@ -41,6 +41,22 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+
+  - name: HorizonLoin
+    uniqueID: 1245472837
+    locked: 0
+  - name: HorizonProche
+    uniqueID: 1231289021
+    locked: 0
+  - name: DecoDerriere
+    uniqueID: 2252039871
+    locked: 0
+  - name: DecoDevant
+    uniqueID: 2478505791
+    locked: 0
+  - name: SolPhysique
+    uniqueID: 679946721
+
   - name: Character
     uniqueID: 2793229859
     locked: 0
@@ -49,4 +65,5 @@ TagManager:
     locked: 0
   - name: Bras
     uniqueID: 2355644257
+
     locked: 0
