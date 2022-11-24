@@ -41,6 +41,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+
   - name: HorizonLoin
     uniqueID: 1245472837
     locked: 0
@@ -55,4 +56,14 @@ TagManager:
     locked: 0
   - name: SolPhysique
     uniqueID: 679946721
+
+  - name: Character
+    uniqueID: 2793229859
+    locked: 0
+  - name: Arme
+    uniqueID: 246623907
+    locked: 0
+  - name: Bras
+    uniqueID: 2355644257
+
     locked: 0
