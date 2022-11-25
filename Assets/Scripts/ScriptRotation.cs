@@ -26,8 +26,11 @@ public class ScriptRotation : MonoBehaviour
 
         //float angle = Vector3.Angle(difference, Vector3.right);
         difference.z = 0.0f;
-        transform.right = difference.normalized;
-
+        if (difference.x > 0)
+        {
+            transform.right = difference.normalized;
+        }
+       
     }
 }
 

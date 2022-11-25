@@ -10,12 +10,9 @@ public class PlayerMouvement : MonoBehaviour
     public SpriteRenderer sprite;
     public Animator animator;
     float horizontal = 0;
-    float moveSpeed = 40f;
+    readonly float moveSpeed = 40f;
     private bool jump = false;
 
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()
@@ -27,22 +24,20 @@ public class PlayerMouvement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
-            
+            animator.SetBool("IsJumping", true);
         }
-        animator.SetBool("IsJumping", jump);
 
     }
 
     private void FixedUpdate()
     {
         controller2D.Move(horizontal * Time.fixedDeltaTime, false, jump);
-        
 
+        jump = false;
     }
 
     public void OnLanded()
     {
-        jump = false;
-        animator.SetBool("IsJumping", jump);
+        animator.SetBool("IsJumping", false);
     }
 }
