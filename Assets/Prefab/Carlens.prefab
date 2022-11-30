@@ -372,8 +372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 418479e99195ee34c8f6260d5020bae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller2D: {fileID: 7436512155993833080}
   sprite: {fileID: 7436512155993833027}
+  rig: {fileID: 0}
   animator: {fileID: 7436512155993833026}
 --- !u!58 &907045282607558651
 CircleCollider2D:
