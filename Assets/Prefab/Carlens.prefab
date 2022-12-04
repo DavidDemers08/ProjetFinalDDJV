@@ -171,7 +171,6 @@ GameObject:
   - component: {fileID: 7436512155993833028}
   - component: {fileID: 7436512155993833027}
   - component: {fileID: 7436512155993833026}
-  - component: {fileID: 7436512155993833080}
   - component: {fileID: 7436512155993833031}
   - component: {fileID: 7436512155993833030}
   - component: {fileID: 7436512155993833029}
@@ -273,46 +272,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7436512155993833080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7436512155993833025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 220430851e8699246b25e848a25fc9e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 700
-  m_CrouchSpeed: 0.4
-  m_MovementSmoothing: 0.05
-  m_AirControl: 1
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 2039
-  m_GroundCheck: {fileID: 7436512155835146630}
-  m_CeilingCheck: {fileID: 7436512156258644043}
-  m_CrouchDisableCollider: {fileID: 0}
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7436512155993833029}
-        m_TargetAssemblyTypeName: PlayerMouvement, Assembly-CSharp
-        m_MethodName: OnLanded
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  OnCrouchEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!50 &7436512155993833031
 Rigidbody2D:
   serializedVersion: 4
@@ -373,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sprite: {fileID: 7436512155993833027}
-  rig: {fileID: 0}
+  rig: {fileID: 7436512155993833031}
   animator: {fileID: 7436512155993833026}
 --- !u!58 &907045282607558651
 CircleCollider2D:
