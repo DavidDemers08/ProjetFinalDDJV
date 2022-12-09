@@ -144,7 +144,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7436512155993833028, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7436512155993833028, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
       propertyPath: m_LocalScale.x
@@ -206,6 +206,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 627cb7d3f59a0f34782771c0219a9c18, type: 2}
+    - target: {fileID: 7436512156402100171, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 61e8da83ae5f51e46a70ada323b0c9ed, type: 3}
     m_RemovedComponents:
     - {fileID: 7436512155993833080, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
@@ -252,7 +256,7 @@ Transform:
   m_Children:
   - {fileID: 2023468045}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &369234311 stripped
 Transform:
@@ -426,8 +430,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1244794295
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -716,5 +720,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

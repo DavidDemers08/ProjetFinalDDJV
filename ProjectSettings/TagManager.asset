@@ -62,6 +62,9 @@ TagManager:
   - name: Character
     uniqueID: 2415076035
     locked: 0
+  - name: Trail
+    uniqueID: 232826293
+    locked: 0
   - name: Bullet
     uniqueID: 1204796205
     locked: 0
