@@ -31,7 +31,6 @@ public class PlayerMouvement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rig.velocity = new Vector2(rig.velocity.x, jumpingPower);
-            animator.SetBool("IsJumping", true);
         }
 
         
@@ -44,6 +43,10 @@ public class PlayerMouvement : MonoBehaviour
         if (IsGrounded())
         {
             animator.SetBool("IsJumping", false);
+        }
+        else
+        {
+            animator.SetBool("IsJumping", true);
         }
     }
 

@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6239870233310793450, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7436512155993833025, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
       propertyPath: m_Name
       value: Carlens
@@ -186,6 +190,18 @@ PrefabInstance:
       propertyPath: rig
       value: 
       objectReference: {fileID: 1229955280}
+    - target: {fileID: 7436512155993833029, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
+      propertyPath: groundCheck
+      value: 
+      objectReference: {fileID: 369234311}
+    - target: {fileID: 7436512155993833029, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
+      propertyPath: groundLayer.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 7436512155993833031, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 627cb7d3f59a0f34782771c0219a9c18, type: 2}
     m_RemovedComponents:
     - {fileID: 7436512155993833080, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
@@ -234,6 +250,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &369234311 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6239870233310793450, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
+  m_PrefabInstance: {fileID: 168255689}
+  m_PrefabAsset: {fileID: 0}
 --- !u!50 &1229955280 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 7436512155993833031, guid: e2d279d2eeb0af041a7ced2514ca9e32, type: 3}
@@ -326,7 +347,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1229955284}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2023468044
 GameObject:
@@ -340,7 +361,8 @@ GameObject:
   - component: {fileID: 2023468047}
   - component: {fileID: 2023468046}
   - component: {fileID: 2023468048}
-  m_Layer: 0
+  - component: {fileID: 2023468049}
+  m_Layer: 10
   m_Name: Sol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,10 +602,31 @@ TilemapCollider2D:
   m_GameObject: {fileID: 2023468044}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: f89fbe1c8ccb3114db09d0a87ab1e739, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
+--- !u!50 &2023468049
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023468044}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
