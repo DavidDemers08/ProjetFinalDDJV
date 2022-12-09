@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,23 +6,27 @@ using UnityEngine;
 public class PlayerFire : MonoBehaviour
 {
     public GameObject bulletPrefab;
-    private Camera cam;
     public Transform endPointGun;
+    private bool canFire = true;
+    public float rateFireInSeconds;
     
 
     // Start is called before the first frame update
-    void Start()
-    {
-        cam = Camera.main;
-    }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        Vector2 mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && canFire)
         {
-            Instantiate(bulletPrefab, endPointGun.position, endPointGun.rotation);
+            StartCoroutine(Fire());
         }
+    }
+
+    private IEnumerator Fire()
+    {
+        canFire = false;
+        Instantiate(bulletPrefab, endPointGun.position, endPointGun.rotation);
+        yield return new WaitForSeconds(1f);
+        canFire = true;
     }
 }
