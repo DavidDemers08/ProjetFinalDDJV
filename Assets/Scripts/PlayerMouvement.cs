@@ -7,14 +7,19 @@ public class PlayerMouvement : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public SpriteRenderer sprite;
-    public Rigidbody2D rig;
-    public Animator animator;
-    float horizontal = 0;
-    readonly float moveSpeed = 5f;
-    private float jumpingPower = 16f;
-    private Transform groundCheck;
-    private LayerMask groundLayer;
+    
+    private float horizontal;
+    private readonly float moveSpeed = 8f;
+    private readonly float jumpingPower = 16f;
+
+    [SerializeField] private SpriteRenderer sprite;
+
+    [SerializeField] private Animator animator;
+
+    [SerializeField]private Transform groundCheck;
+    [SerializeField]private LayerMask groundLayer;
+    [SerializeField]private Rigidbody2D rig;
+
 
 
     // Update is called once per frame
@@ -26,11 +31,19 @@ public class PlayerMouvement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rig.velocity = new Vector2(rig.velocity.x, jumpingPower);
+            animator.SetBool("IsJumping", true);
         }
+
+        
 
         if (Input.GetButtonUp("Jump") && rig.velocity.y > 0f)
         {
             rig.velocity = new Vector2(rig.velocity.x, rig.velocity.y * 0.5f);
+        }
+
+        if (IsGrounded())
+        {
+            animator.SetBool("IsJumping", false);
         }
     }
 
