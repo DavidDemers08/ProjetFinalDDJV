@@ -193,6 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
+
   controlID: 87
 --- !u!114 &9
 MonoBehaviour:
@@ -299,10 +300,8 @@ MonoBehaviour:
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
-  - {fileID: 20}
-  - {fileID: 21}
   m_Selected: 0
-  m_LastSelected: 2
+  m_LastSelected: 0
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -539,7 +538,7 @@ MonoBehaviour:
       containerId: overlay-toolbar__top
       floating: 0
       collapsed: 0
-      displayed: 1
+      displayed: 0
       snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -581,12 +580,12 @@ MonoBehaviour:
       layout: 4
     - dockPosition: 1
       containerId: overlay-container--right
-      floating: 0
+      floating: 1
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: -203, y: -131}
       snapOffsetDelta: {x: 0, y: 0}
-      snapCorner: 0
+      snapCorner: 3
       id: Scene View/Camera
       index: 1
       layout: 4
@@ -811,6 +810,7 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: -2935758783711519648, guid: 5778350ffb2d15740b1f76cf39dda01b, type: 2}
     - {fileID: -3525318745597352871, guid: 05734d0102c31ab4ab8566614e0f82dd, type: 2}
+
     m_ValueSerializationHelper:
     - e00: 0.5670747
       e01: 0
@@ -901,18 +901,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefab
+    - Assets/Ennemies/4
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefab
+  - Assets/Ennemies/4
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\1942878\Desktop\ProjetFinalDDJV
+  m_LastProjectPath: C:\Users\1826732\Documents\ProjetFinalDDJV
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+
     scrollPos: {x: 0, y: 60}
     m_SelectedIDs: dc610000
     m_LastClickedID: 25052
@@ -1023,6 +1024,7 @@ MonoBehaviour:
     x: 0
     y: 633
     width: 1324
+
     height: 366
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1069,7 +1071,6 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
---- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1135,3 +1136,4 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_LastSelectedObjectID: 34226
+
