@@ -1,6 +1,3 @@
-
-{}
-
 trackSelection = true
 fetchPreview = true
 wantsMore = false
@@ -10,7 +7,7 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.8040E7BB" = ""
+	"last_search.8040E7BB" = "audio li"
 	"OpenInspectorPreview.8040E7BB" = "0"
 	"currentGroup.8040E7BB" = "all"
 }
@@ -68,4 +65,3 @@ queryBuilder = false
 ignoredProperties = "id;name;classname;imagecontentshash"
 helperWidgetCurrentArea = "all"
 disabledIndexers = ""
-

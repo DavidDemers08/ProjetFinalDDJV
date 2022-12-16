@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float speed = 20;
     public Rigidbody2D rig;
+    private float rebond = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,17 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //Destroy(gameObject); 
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Mechant") || collision.gameObject.layer == LayerMask.NameToLayer("NPC"))
+        {
+            Object.Destroy(this.gameObject);
+        }
+        else
+        {
+            rebond += 1;
+            if (rebond >= 3)
+            {
+                Object.Destroy(this.gameObject);
+            }
+        }
     }
 }

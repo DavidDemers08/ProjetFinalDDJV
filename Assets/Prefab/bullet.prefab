@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 8716170467444546376}
   - component: {fileID: -6944370524382263027}
   - component: {fileID: -7279034474338948160}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0

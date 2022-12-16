@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MechantMouvement : MonoBehaviour
+public class HelicopterScript : MonoBehaviour
 {
+
+
     public GameObject cible;
-    public float distanceVision = 10.0f;
+    public float distanceVision = 15.0f;
     public LayerMask masqueRaycast;
     public float vitesseChasse = 3.0f;
     private Animator anim;
@@ -20,36 +22,36 @@ public class MechantMouvement : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rig = GetComponent<Rigidbody2D>();
-        
     }
 
     void Update()
     {
-        
+
     }
 
 
     void FixedUpdate()
     {
-        if (alive) { 
+        if (alive)
+        {
             visionDirection = cible.transform.position - transform.position;
             visionDirection.Normalize();
             RaycastHit2D rayon = Physics2D.Raycast(transform.position, visionDirection, distanceVision, masqueRaycast);
 
             float distance_destination = distanceVision;
-            
+
             if (rayon.collider != null)
             {
                 distance_destination = rayon.distance;
                 if (rayon.collider.gameObject.layer == LayerMask.NameToLayer("Joueur"))
                 {
-                    Vector3 objectif = cible.transform.position - transform.position;           
-                    objectif.y = transform.position.y - 0.20f;
+                    Vector3 objectif = cible.transform.position - transform.position;
+
                     transform.position = transform.position + Time.fixedDeltaTime * vitesseChasse * objectif.normalized;
 
 
 
-                anim.SetBool("chasse", true);
+                    anim.SetBool("Chasse", true);
                 }
             }
 
@@ -57,14 +59,13 @@ public class MechantMouvement : MonoBehaviour
 
     }
 
-    
+
 
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("bullet"))
         {
-            Debug.Log("MORT");
             alive = false;
             anim.SetBool("Dead", true);
             StartCoroutine(CoroutineDead());
@@ -83,4 +84,6 @@ public class MechantMouvement : MonoBehaviour
 
     }
 
+
+   
 }
