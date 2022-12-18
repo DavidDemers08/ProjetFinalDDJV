@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3543989801336572671}
   - component: {fileID: 3543989801336572670}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Fondu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,16 +1,30 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHit : MonoBehaviour
 {
-    public GameObject prefab;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private Animator anim;
+    private void Start()
     {
-        if (collision.CompareTag("Bullet"))
+        anim = GetComponent<Animator>();   
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            Instantiate(prefab, transform.position, Quaternion.identity) ;
+            StartCoroutine(Hurt());
+            
         }
+    }
+
+    private IEnumerator Hurt()
+    {
+        anim.SetBool("IsHurt", true);
+        yield return new WaitForSeconds(1f);
+        anim.SetBool("IsHurt", false);
+
     }
 }

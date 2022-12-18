@@ -45,7 +45,8 @@ public class MechantMouvement : MonoBehaviour
                 {
                     Vector3 objectif = cible.transform.position - transform.position;           
                     objectif.y = transform.position.y - 0.20f;
-                    transform.position = transform.position + Time.fixedDeltaTime * vitesseChasse * objectif.normalized;
+                    rig.velocity = vitesseChasse * objectif.normalized;
+                    //transform.position = transform.position + Time.fixedDeltaTime * vitesseChasse * objectif.normalized;
 
 
 
@@ -57,7 +58,7 @@ public class MechantMouvement : MonoBehaviour
 
     }
 
-    
+
 
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -5,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class EventSystemScript : MonoBehaviour
 {
     private EnumChoix choix = EnumChoix.eCommencerJeu;
+    public GameObject fade;
     
 
     private enum EnumChoix
@@ -23,7 +26,7 @@ public class EventSystemScript : MonoBehaviour
         
     }
 
-    public void changerChoix()
+    public void ChangerChoix()
     {
         if (EventSystem.current.currentSelectedGameObject.name.Equals("Item 1: Quitter la partie"))
         {
@@ -36,16 +39,24 @@ public class EventSystemScript : MonoBehaviour
 
     }
 
-    public void onClick()
+    public void OnClick()
     {
         if (choix == EnumChoix.eCommencerJeu)
         {
-           SceneManager.LoadScene("Niveau1");
+            StartCoroutine(Niveau1());
+           //SceneManager.LoadScene("Niveau1");
         }
         else
         {
             Application.Quit();
         }
     }
-    
+
+    private IEnumerator Niveau1()
+    {
+        fade.SetActive(true);
+        fade.GetComponent<Animator>().Play("FadeIn");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Niveau1");
+    }
 }
