@@ -1317,6 +1317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Square
       objectReference: {fileID: 0}
+    - target: {fileID: 3543989801336572669, guid: d5b069d3570eb8844be1b8b8060505f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3543989801336572671, guid: d5b069d3570eb8844be1b8b8060505f9, type: 3}
       propertyPath: m_SortingLayer
       value: 10
