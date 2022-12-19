@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour
 
     IEnumerator CoroutineRetourMenu()
     {
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.2f);
         SceneManager.LoadScene("Menu");
 
     }

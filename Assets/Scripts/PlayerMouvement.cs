@@ -64,20 +64,5 @@ public class PlayerMouvement : MonoBehaviour
         rig.velocity = new Vector2(horizontal * moveSpeed, rig.velocity.y);
     }
 
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.layer == LayerMask.NameToLayer("Mechant"))
-    //    {
-    //        StartCoroutine(CoroutineDead());
-    //    }
-    //}
-
-    //IEnumerator CoroutineDead()
-    //{
-    //    alive = false;
-    //    animator.SetBool("IsDead", true);
-    //    yield return new WaitForSeconds(0.8f);
-    //    EventManager.TriggerEvent("GameOver", null);
-
-    //}
+    
 }
