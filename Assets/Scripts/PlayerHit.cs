@@ -7,7 +7,7 @@ public class PlayerHit : MonoBehaviour
 {
     private Animator anim;
     public GameObject heartContainer;
-    public PlayerLife vie;
+    public PlayerLife PlayerLifeScript;
     private void Start()
     {
         anim = GetComponent<Animator>();   
@@ -17,15 +17,15 @@ public class PlayerHit : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            if (vie.vie >0)
+            if (PlayerLifeScript.vie > 0)
             {
                 Destroy(heartContainer.transform.GetChild(0).gameObject);
                 StartCoroutine(Hurt());
-                vie.vie -= 0;
+                PlayerLifeScript.vie--;
             }
             else
             {
-                Death();
+                StartCoroutine(CoroutineDead());
             }
            
 
@@ -34,11 +34,6 @@ public class PlayerHit : MonoBehaviour
 
             
         }
-    }
-
-    private void Death()
-    {
-        throw new NotImplementedException();
     }
 
     private IEnumerator Hurt()
@@ -52,8 +47,7 @@ public class PlayerHit : MonoBehaviour
     IEnumerator CoroutineDead()
     {
         //animator.SetBool("IsDead", true);
-        yield return new WaitForSeconds(0.8f);
         EventManager.TriggerEvent("GameOver", null);
-
+        yield break;
     }
 }
