@@ -40,6 +40,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 254097659
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
@@ -58,6 +61,9 @@ TagManager:
   - name: SolPhysique
     uniqueID: 3050173001
     locked: 0
+  - name: ad
+    uniqueID: 716376395
+    locked: 0
   - name: Bras
     uniqueID: 3258241567
     locked: 0
@@ -72,4 +78,7 @@ TagManager:
     locked: 0
   - name: Gun
     uniqueID: 2709894929
+    locked: 0
+  - name: UI
+    uniqueID: 3318331485
     locked: 0

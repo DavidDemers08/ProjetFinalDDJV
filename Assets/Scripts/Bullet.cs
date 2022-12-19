@@ -25,13 +25,13 @@ public class Bullet : MonoBehaviour
         {
             Object.Destroy(this.gameObject);
         }
-        else
-        {
-            rebond += 1;
-            if (rebond >= 3)
-            {
-                Object.Destroy(this.gameObject);
-            }
-        }
+        //else
+        //{
+        //    rebond += 1;
+        //    if (rebond >= 3)
+        //    {
+        //        Object.Destroy(this.gameObject);
+        //    }
+        //}
     }
 }
