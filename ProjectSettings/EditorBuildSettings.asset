@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NIveau2.unity
     guid: 9c5c27f101a84694487bbdbbe0a06742
+  - enabled: 1
+    path: Assets/Scenes/FinDeJeu.unity
+    guid: 0dbe3f9bfaa593640831ec63f3b1f74b
   m_configObjects: {}
