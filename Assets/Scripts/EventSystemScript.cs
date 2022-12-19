@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class EventSystemScript : MonoBehaviour
 {
-    private EnumChoix choix = EnumChoix.eCommencerJeu;
+    //private EnumChoix choix = EnumChoix.eCommencerJeu;
     public GameObject fade;
     
 
-    private enum EnumChoix
-    {
-        eQuitter = 1,
-        eCommencerJeu = 2,
-    };
+    //private enum EnumChoix
+    //{
+    //    eQuitter = 1,
+    //    eCommencerJeu = 2,
+    //};
     void Start()
     {
         
@@ -26,30 +26,27 @@ public class EventSystemScript : MonoBehaviour
         
     }
 
-    public void ChangerChoix()
-    {
-        if (EventSystem.current.currentSelectedGameObject.name.Equals("Item 1: Quitter la partie"))
-        {
-            choix = EnumChoix.eQuitter;
-        }
-        else
-        {
-            choix = EnumChoix.eCommencerJeu;
-        }
+    //public void ChangerChoix()
+    //{
+    //    if (EventSystem.current.currentSelectedGameObject.name.Equals("Item 1: Quitter la partie"))
+    //    {
+    //        choix = EnumChoix.eQuitter;
+    //    }
+    //    else
+    //    {
+    //        choix = EnumChoix.eCommencerJeu;
+    //    }
 
+    //}
+
+    public void Confirmer()
+    {
+            StartCoroutine(Niveau1());
     }
 
-    public void OnClick()
+    public void Quitter()
     {
-        if (choix == EnumChoix.eCommencerJeu)
-        {
-            StartCoroutine(Niveau1());
-           //SceneManager.LoadScene("Niveau1");
-        }
-        else
-        {
-            Application.Quit();
-        }
+        Application.Quit();
     }
 
     private IEnumerator Niveau1()
